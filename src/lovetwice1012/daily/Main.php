@@ -1,6 +1,6 @@
 <?php
 
-namespace apartkktrain\tokyo;
+namespace lovetwice1012\daily;
 
 use pocketmine\event\Listener;
 use pocketmine\event\PlayerJoinEvent;
