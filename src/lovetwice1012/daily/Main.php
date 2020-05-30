@@ -118,6 +118,8 @@ class EventListener implements Listener
             }
             
             
+        }else{
+        $player->sendTip("今日のデイリーミッションは"$this->data->get("nowmission")."を".$this->data->get("ckeckpoint")."回することです。");
         }
         
     }
