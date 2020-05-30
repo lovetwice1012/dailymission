@@ -1,2 +1,2 @@
-# plugin-project
-pluginの共同開発。
+# Dailymission
+  デイリーミッションを追加。
