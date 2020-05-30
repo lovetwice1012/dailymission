@@ -9,7 +9,7 @@ use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\Player;
-use LousWiteMC\AdvancedJobs\AdvancedJobs;
+use pocketmine\Server;
 use pocketmine\block\{Wood, Wood2, DiamondOre, Diamond, Iron, IronOre, Gold, GoldOre, Emerald, EmeraldOre, Stone, Cobblestone, Redstone, RedstoneOre, Coal, CoalOre, Lapis, LapisOre};
 use pocketmine\entity\{Animal, Monster};
 
@@ -17,7 +17,7 @@ class EventListener implements Listener
 {
     public $data;
     public $plugin;
-    
+    public $money;
     public function onEnable()
     {
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
@@ -32,6 +32,7 @@ class EventListener implements Listener
     {
         date_default_timezone_set('Asia/Tokyo');
         $this->data = new Config($this->getDataFolder() . "Data.yml", Config::YAML);
+        $this->money = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
     }
     public function isToday()
     {
@@ -112,7 +113,8 @@ class EventListener implements Listener
             
             if (checkProgress($player)) {
                 //ここにデイリーミッションクリアしたことを通知するコード入れてね
-                $player->addTitle("デイリーミッションクリア！", "明日もがんばってね！");
+                $player->addTitle("デイリーミッションクリア！25万円プレゼント！", "明日もがんばってね！");
+                $this->money->addMoney($player, "250000);
             }
             
             
