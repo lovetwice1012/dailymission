@@ -3,12 +3,14 @@
 namespace lovetwice1012\daily;
 
 use pocketmine\event\Listener;
+use pocketmine\plugin\PluginBase;
 use pocketmine\event\PlayerJoinEvent;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\Player;
+use pocketmine\utils\Config;
 use pocketmine\Server;
 use pocketmine\block\{Wood, Wood2, DiamondOre, Diamond, Iron, IronOre, Gold, GoldOre, Emerald, EmeraldOre, Stone, Cobblestone, Redstone, RedstoneOre, Coal, CoalOre, Lapis, LapisOre};
 use pocketmine\entity\{Animal, Monster};
