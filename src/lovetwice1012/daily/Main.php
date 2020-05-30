@@ -15,7 +15,7 @@ use pocketmine\Server;
 use pocketmine\block\{Wood, Wood2, DiamondOre, Diamond, Iron, IronOre, Gold, GoldOre, Emerald, EmeraldOre, Stone, Cobblestone, Redstone, RedstoneOre, Coal, CoalOre, Lapis, LapisOre};
 use pocketmine\entity\{Animal, Monster};
 
-class dailymission implements PluginBase
+class dailymission extends PluginBase
 {
     public $data;
     public $plugin;
