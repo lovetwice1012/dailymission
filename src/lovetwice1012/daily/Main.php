@@ -13,7 +13,7 @@ use pocketmine\Server;
 use pocketmine\block\{Wood, Wood2, DiamondOre, Diamond, Iron, IronOre, Gold, GoldOre, Emerald, EmeraldOre, Stone, Cobblestone, Redstone, RedstoneOre, Coal, CoalOre, Lapis, LapisOre};
 use pocketmine\entity\{Animal, Monster};
 
-class EventListener implements Listener
+class dailymission implements PluginBase
 {
     public $data;
     public $plugin;
