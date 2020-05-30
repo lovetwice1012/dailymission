@@ -114,7 +114,7 @@ class EventListener implements Listener
             if (checkProgress($player)) {
                 //ここにデイリーミッションクリアしたことを通知するコード入れてね
                 $player->addTitle("デイリーミッションクリア！25万円プレゼント！", "明日もがんばってね！");
-                $this->money->addMoney($player, "250000);
+                $this->money->addMoney($player, 250000);
             }
             
             
