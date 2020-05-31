@@ -101,8 +101,8 @@ class Main extends PluginBase implements Listener
     }
     public function addProgress($player, $type)
     {
-        isToday();
-        if (isNowmission()) {
+        $this->isToday();
+        if ($this->isNowmission()) {
             if ($this->data->exists($player->getName())) {
                 $this->data->set($player->getName(), $this->data->get($player->getName()) + 1);
                 
@@ -113,7 +113,7 @@ class Main extends PluginBase implements Listener
             }
             $this->data->save();
             
-            if (checkProgress($player)) {
+            if ($this->checkProgress($player)) {
                 //ここにデイリーミッションクリアしたことを通知するコード入れてね
                 $player->addTitle("デイリーミッションクリア！25万円プレゼント！", "明日もがんばってね！");
                 $this->money->addMoney($player, 250000);
