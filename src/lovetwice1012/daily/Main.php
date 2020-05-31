@@ -102,7 +102,7 @@ class Main extends PluginBase implements Listener
     public function addProgress($player, $type)
     {
         $this->isToday();
-        if ($this->isNowmission()) {
+        if ($this->isNowmission($type)) {
             if ($this->data->exists($player->getName())) {
                 $this->data->set($player->getName(), $this->data->get($player->getName()) + 1);
                 
