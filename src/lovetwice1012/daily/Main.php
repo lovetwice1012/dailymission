@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener
                     
                     
                     $this->data->set($key, 0);
-                    
+                    $this->data->save();
                 }
                 
             }
@@ -77,7 +77,7 @@ class Main extends PluginBase implements Listener
             $this->data->set("nowmission", $Ajob);
             $this->data->set("checkpoint", $rand2);
             
-            
+            $this->data->save();
             
             return true;
         }
@@ -123,7 +123,7 @@ class Main extends PluginBase implements Listener
         }else{
         $player->sendTip("今日のデイリーミッションは".$this->data->get("nowmission")."を".$this->data->get("ckeckpoint")."回することです。");
         }
-        
+        $this->data->save();
     }
     public function onBreak(BlockBreakEvent $event)
     {
