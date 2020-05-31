@@ -98,6 +98,15 @@ class Main extends PluginBase implements Listener
         }
         
     }
+    public function isFinish($player)
+    {
+        if ($this->data->get("checkpoint") <= $this->data->get($player->getName())) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
     public function addProgress($player, $type)
     {
         $this->isToday();
@@ -120,8 +129,12 @@ class Main extends PluginBase implements Listener
             
             
         }else{
+            if ($this->isFinish($player)) {
+                
+            }else{
         $player->sendTip("今日のデイリーミッションは".$this->data->get("nowmission")."を".$this->data->get("checkpoint")."回することです。");
-        }
+            }
+            }
         $this->data->save();
     }
     public function onBreak(BlockBreakEvent $event)
