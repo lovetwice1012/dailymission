@@ -119,6 +119,8 @@ class Main extends PluginBase implements Listener
                 
                 
             }
+            $player->sendTip("デイリーミッションの進行度:".$this->data->get("nowmission")."を".$this->data->get("checkpoint")."回中".$this->data->get($player->getName())."回行いました。");
+            
             $this->data->save();
             
             if ($this->checkProgress($player)) {
