@@ -92,7 +92,7 @@ class Main extends PluginBase implements Listener
     }
     public function checkProgress($player)
     {
-        if ($this->data->get("ckeckpoint") <= $this->data->get($player->getName())) {
+        if ($this->data->get("checkpoint") <= $this->data->get($player->getName())) {
             return true;
         } else {
             return false;
@@ -121,7 +121,7 @@ class Main extends PluginBase implements Listener
             
             
         }else{
-        $player->sendTip("今日のデイリーミッションは".$this->data->get("nowmission")."を".$this->data->get("ckeckpoint")."回することです。");
+        $player->sendTip("今日のデイリーミッションは".$this->data->get("nowmission")."を".$this->data->get("checkpoint")."回することです。");
         }
         $this->data->save();
     }
