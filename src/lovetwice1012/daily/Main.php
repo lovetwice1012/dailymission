@@ -61,17 +61,16 @@ class Main extends PluginBase implements Listener
             switch ($rand) {
                 case 1:
                     $Ajob = "wood";
+                    break;
                 case 2:
                     $Ajob = "mine";
+                    break;
                 case 3:
                     $Ajob = "build";
-                
+                    break;             
                 case 4:
                     $Ajob = "kill";
-                    
-                    
-                    
-                    
+                    break;
             }
             
             $this->data->set("nowmission", $Ajob);
