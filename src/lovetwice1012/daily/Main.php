@@ -91,7 +91,7 @@ class Main extends PluginBase implements Listener
     }
     public function checkProgress($player)
     {
-        if ($this->data->get("checkpoint") = $this->data->get($player->getName())) {
+        if ($this->data->get("checkpoint") == $this->data->get($player->getName())) {
             return true;
         } else {
             return false;
