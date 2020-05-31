@@ -42,7 +42,7 @@ class Main extends PluginBase implements Listener
             return true;
         } else {
             $this->data->set("date", date("Y/m/d"));
-            $Bdata = $this->config->getAll();
+            $Bdata = $this->data->getAll();
             foreach ($Bdata as $key => $value) {
                 if ($key != "date" && $key != "nowmission") {
                     
