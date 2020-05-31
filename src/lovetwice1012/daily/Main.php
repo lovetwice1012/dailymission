@@ -15,14 +15,14 @@ use pocketmine\Server;
 use pocketmine\block\{Wood, Wood2, DiamondOre, Diamond, Iron, IronOre, Gold, GoldOre, Emerald, EmeraldOre, Stone, Cobblestone, Redstone, RedstoneOre, Coal, CoalOre, Lapis, LapisOre};
 use pocketmine\entity\{Animal, Monster};
 
-class Main extends PluginBase
+class Main extends PluginBase implements Listener
 {
     public $data;
     public $plugin;
     public $money;
     public function onEnable()
     {
-        $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
         
         $this->load();
         $this->plugin = $this;
