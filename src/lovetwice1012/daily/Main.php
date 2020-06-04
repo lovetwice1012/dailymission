@@ -133,8 +133,7 @@ class Main extends PluginBase implements Listener
         } elseif ($block instanceof Diamond or $block instanceof DiamondOre or $block instanceof Iron or $block instanceof IronOre or $block instanceof Gold or $block instanceof GoldOre or $block instanceof Emerald or $block instanceof EmeraldOre or $block instanceof Stone or $block instanceof Cobblestone or $block instanceof Redstone or $block instanceof RedstoneOre or $block instanceof Coal or $block instanceof CoalOre or $block instanceof Lapis or $block instanceof LapisOre) {           
                 $this->plugin->addProgress($player, "mine");           
         }
-    }
-    
+    }    
     public function onPlace(BlockPlaceEvent $event)
     {
         $player = $event->getPlayer();
@@ -152,6 +151,5 @@ class Main extends PluginBase implements Listener
                 }
             }
         }
-    }
-    
+    }    
 }
