@@ -34,6 +34,7 @@ class Main extends PluginBase implements Listener
         $this->money = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
         if(!$this->config->exists("money")){
         $this->config->set("money",10000);
+        $this->data->save();
         }
     }
     public function isToday()
