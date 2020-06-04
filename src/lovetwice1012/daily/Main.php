@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         $this->money = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
         if(!$this->config->exists("money")){
-        $this->config->set("money",10000)
+        $this->config->set("money",10000);
         }
     }
     public function isToday()
