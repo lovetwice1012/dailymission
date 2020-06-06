@@ -112,7 +112,6 @@ class Main extends PluginBase implements Listener
             }
             $this->data->save();          
             if ($this->checkProgress($player)) {
-                //ここにデイリーミッションクリアしたことを通知するコード入れてね
                 $player->addTitle("デイリーミッションクリア！".$this->config->get("money")."円プレゼント！", "明日もがんばってね！");
                 $this->money->addMoney($player, $this->config->get("money"));
             }                        
